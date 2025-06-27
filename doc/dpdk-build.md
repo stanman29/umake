@@ -16,10 +16,10 @@ make prepare
 ## Results
 | compilation                    	| time (seconds) 	| command           	| comments 	|
 |--------------------------------	|----------------	|-------------------	|----------	|
-| ninja                          	| 160            	| make ninja 
-| ninja null build                         	| 0.054            	| make ninja        	|          	|
+| ninja                          	| 160            	| make ninja          |           |
+| ninja null build                | 0.054           | make ninja        	|          	|
 | umake - uncached               	| 274            	| make umake        	| [1]      	|
-| umake null build               	| 0.9            	| make umake        	|       	|
+| umake null build               	| 0.9            	| make umake        	|       	  |
 | umake - local cache            	| `9`            	| make umake-local  	|          	|
 | umake - remote cache(over lan) 	| 14             	| make umake-remote 	|          	|
 
