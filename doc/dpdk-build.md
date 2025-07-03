@@ -1,5 +1,6 @@
 
 # Build DPDK in 9 seconds
+
 [`DPDK`](https://www.dpdk.org/) is an open source project for fast packet processing. `umake` can compile it in `9` seconds:
 
 ![dpdk build](images/dpdk-build/dpdk-build.gif)
@@ -8,12 +9,15 @@
 
 - VM with 6 cpus / `Intel(R) Xeon(R) Gold 6138 CPU @ 2.00GHz` host
 - prepare tests with:
+  
 ```
 git clone https://github.com/grisha85/dpdk.git
 cd dpdk
 make prepare
 ```
+
 ## Results
+
 | compilation                    	| time (seconds) 	| command           	| comments 	|
 |--------------------------------	|----------------	|-------------------	|----------	|
 | ninja                          	| 160            	| make ninja          |           |
@@ -26,6 +30,7 @@ make prepare
 1. strace has huge performance penalty
 
 ## How the port to `umake` was made
+
 - Output of verbose `ninja` compilation was saved to a file: [ninja compilation output](https://github.com/grisha85/dpdk/blob/master/ninja)
 - The output was parsed with a [python script](https://github.com/grisha85/dpdk/blob/master/parse_ninja.py) to `UMakefile` 
 
