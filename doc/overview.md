@@ -9,9 +9,9 @@ Since a lot of the core concepts from tup apply to umake it is highly recommende
 Why UMake
 ---------
 
-- Fast modification detection (sub second even for large projects)
-- More parallelism due to DAG (more details later)
-- Fast re-compilation, with built-in cache (local-cache, remote-cache)
+* Fast modification detection (sub second even for large projects)
+* More parallelism due to DAG (more details later)
+* Fast re-compilation, with built-in cache (local-cache, remote-cache)
 
 My First UMakfile
 -----------------
