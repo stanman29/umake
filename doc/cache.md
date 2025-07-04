@@ -44,7 +44,7 @@ For more minio configurations refer to the [docs](https://github.com/minio/minio
 Now that the server is up and running we need to create a bucket for umake.
 The simplest way to do it is via the minio web interface.
 
-* Access http://localhost:9000 and user the username and password you selected.
+* Access <http://localhost:9000> and user the username and password you selected.
 * Create a new bucket called umake-build-cache
 
 And that's it! we are good to go. Let's test it out using the example in the repo
