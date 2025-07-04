@@ -29,7 +29,6 @@ main()
 }
 ```
 
-
 `UMakefile`:
 ```
 : a.c > gcc -c {filename} {target} > a.o
