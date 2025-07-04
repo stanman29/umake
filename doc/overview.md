@@ -2,16 +2,14 @@ UMake Overview
 ==============
 Since a lot of the core concepts from tup apply to umake it is highly recommended to read the following:
 
-* http://gittup.org/tup/ex_dependencies.html
-* http://gittup.org/tup/make_vs_tup.html
-
+* <http://gittup.org/tup/ex_dependencies.html>
+* <http://gittup.org/tup/make_vs_tup.html>
 
 Why UMake
 ---------
 - Fast modification detection (sub second even for large projects)
 - More parallelism due to DAG (more details later)
 - Fast re-compilation, with built-in cache (local-cache, remote-cache)
-
 
 My First UMakfile
 -----------------
@@ -69,7 +67,9 @@ Lets have another rule that generates header which will be used by other another
 : b.c > gcc -c {filename} {target} > b.o
 ```
 first rule above is generating header `a.pb-c.h` that `b.c` is including.
+
 ### Graph after parsing the rules
+
 ![ ](images/overview/3.png)
 
 
@@ -78,6 +78,7 @@ Now we have copmilation ordering issue. `b.o` might be generated before `a.pb-c.
 When running the above `UMakefile`, an error will be reported. This is because second rule using target of the the first rule internally (to generate `b.o`, `a.pb-c.h` is needed)
 
 ### Manual Dependency: `|`
+
 In order to fix this order issue we need to tell `umake` that generating `b.o` should come only after `a.pb-c.h` is generated. We would use `| a.pb-c.h` for that.
 
 `UMakefile`:
@@ -87,6 +88,7 @@ In order to fix this order issue we need to tell `umake` that generating `b.o` s
 ```
 
 ### Graph after parsing the above UMakefile
+
 ![ ](images/overview/4.png)
 
 
