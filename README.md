@@ -1,12 +1,10 @@
-UMake
-=====
+# UMake
 
 **Blazing Fast. Sub second Modification detection. Just a few seconds for cached compilation**
 
 ![dpdk build](doc/images/dpdk-build/dpdk-build.gif)
 
-Overview
---------
+## Overview
 
 UMake is a build system that building your projects.
 Influenced by [`tup`](http://gittup.org/tup/). With the features below your compilation speed will be on average dramatically reduced, either after branch change either with your `CI` builds.
@@ -36,8 +34,7 @@ makes your life easier to create build scripts no matter what your tool is: `gcc
 
 [UMakefile](doc/umakefile.md)
 
-Install
--------
+## Install
 
 platform: linux (tested on ubuntu 18.04)
 
@@ -53,8 +50,7 @@ cd umake
 pip3 install .
 ```
 
-Running example
----------------
+## Running example
 
 ```
 git clone https://github.com/grisha85/umake.git
@@ -65,8 +61,7 @@ umake --no-remote-cache
 ./hello_world
 ```
 
-UMake configuration
--------------------
+## UMake configuration
 
 This section lists all the various configurations that umake supports
 
@@ -74,14 +69,12 @@ This section lists all the various configurations that umake supports
 |--------------------------------|------------------------------------------------------------|
 | UMAKE_CONFIG_ROOT              | The root directory in which all umake files will be stored |
 
-Real Life Examples
-------------------
+## Real Life Examples
 
 [DPDK build](doc/dpdk-build.md)
 
 
-Talking about UMake:
---------------------
+## Talking about UMake:
 
 This section includes link to various places around the web that reason about umake.
 We believe that by reviewing questions and opinions that other people wrote about umake one can learn more about it.
