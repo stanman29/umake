@@ -24,7 +24,7 @@ class Timer:
 
     def __exit__(self, *args):
         self.end = time.time()
-        interavl = self.end - self.start 
+        interavl = self.end - self.start
         print(f"[{interavl:.3f}] [{interavl/self.iterations:.5f} per iter] {self.msg}")
 
 class TestUMake(unittest.TestCase):
