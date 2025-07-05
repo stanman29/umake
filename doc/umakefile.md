@@ -177,7 +177,6 @@ configure remote cache
 
 **permission** - ro (read-only)/ rw (read/write)
 
-
 #### `local cache size`
 
 Default: 1500MB
