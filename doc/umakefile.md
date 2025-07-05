@@ -51,7 +51,6 @@ root\
 
 In order to maintain a correct build order (that is executed in parallel), there are use cases where manual dependency is needed. for example: if there are `generated headers` (like when using `protobuf`) that are being later used by another `command` to generate a different target.
 
-
 ## Rule `:foreach`
 
 Same as `:` but will create `command` for each `source` file existing on filesystem (like when we match the pettern *.o in the example above)
