@@ -73,7 +73,6 @@ This section lists all the various configurations that umake supports
 
 [DPDK build](doc/dpdk-build.md)
 
-
 ## Talking about UMake:
 
 This section includes link to various places around the web that reason about umake.
