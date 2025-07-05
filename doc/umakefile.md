@@ -13,7 +13,6 @@ A single `command` is generated for this rule
 
 `target` - the output of the command
 
-
 `{filename}` - full path filename of the source `/my/path/filename.a`
 
 `{dir}` - directory containing the source `/my/path/`
@@ -27,7 +26,7 @@ Example:
 : *.o > gcc {filename} -o {target} > helloworld.a
 ```
 
-#### Recursive Source `**`
+### Recursive Source `**`
 
 recursive dependencies are support
 
@@ -66,7 +65,8 @@ Example:
 ```
 !c(includes, flags) : gcc -g -O2 -Wall -fPIC -c {filename} $includes $flags -o {target} > {dir}/{noext}.o
 ```
-#### Default values
+
+### Default values
 
 `Macro` supports default values, by default they are `""`:
 ```
@@ -92,7 +92,7 @@ $libs = -lpthread
 
 Configs allow to configure and changing umake execution.
 
-#### `workdir`
+### `workdir`
 
 Default: \<root>
 
