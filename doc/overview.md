@@ -130,7 +130,6 @@ $flags = -O3
 
 ## Compiling specific target
 
-
 ```
 umake lib/libmy_lib.so
 ```
