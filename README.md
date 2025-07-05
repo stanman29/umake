@@ -1,11 +1,13 @@
 UMake
 =====
+
 **Blazing Fast. Sub second Modification detection. Just a few seconds for cached compilation**
 
 ![dpdk build](doc/images/dpdk-build/dpdk-build.gif)
 
 Overview
 --------
+
 UMake is a build system that building your projects.
 Influenced by [`tup`](http://gittup.org/tup/). With the features below your compilation speed will be on average dramatically reduced, either after branch change either with your `CI` builds.
 
@@ -16,12 +18,15 @@ Influenced by [`tup`](http://gittup.org/tup/). With the features below your comp
 
 
 #### `Local cache`
+
 many base libraries in your project rarely changed, why recompile them over and over again. Local cache reduce compilation times and remote cache access.
 
 #### `Remote cache`
+
 If someone already compiled most of the libraries in your project, use those results.
 
 #### `Auto dependency discovery`
+
 makes your life easier to create build scripts no matter what your tool is: `gcc`, `protoc`, `docker build` ...
 
 
@@ -50,6 +55,7 @@ pip3 install .
 
 Running example
 ---------------
+
 ```
 git clone https://github.com/grisha85/umake.git
 cd umake
@@ -61,6 +67,7 @@ umake --no-remote-cache
 
 UMake configuration
 -------------------
+
 This section lists all the various configurations that umake supports
 
 | Variable name                  | Description                                                |
@@ -69,11 +76,13 @@ This section lists all the various configurations that umake supports
 
 Real Life Examples
 ------------------
+
 [DPDK build](doc/dpdk-build.md)
 
 
 Talking about UMake:
 --------------------
+
 This section includes link to various places around the web that reason about umake.
 We believe that by reviewing questions and opinions that other people wrote about umake one can learn more about it.
 So without further ado is here is the list:
