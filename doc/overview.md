@@ -96,7 +96,6 @@ In order to fix this order issue we need to tell `umake` that generating `b.o` s
 
 ![ ](images/overview/4.png)
 
-
 :foreach rule
 --------
 
