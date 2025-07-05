@@ -72,7 +72,6 @@ first rule above is generating header `a.pb-c.h` that `b.c` is including.
 
 ![ ](images/overview/3.png)
 
-
 Now we have copmilation ordering issue. `b.o` might be generated before `a.pb-c.h` because nothing enforce the order between and `b.o` and `a.pb-c.h`.
 
 When running the above `UMakefile`, an error will be reported. This is because second rule using target of the the first rule internally (to generate `b.o`, `a.pb-c.h` is needed)
@@ -138,8 +137,7 @@ umake lib/libmy_lib.so
 ```
 In this case only the subraph of `lib/libmy_lib.so` will be recompiled
 
-Variants
---------
+## Variants
 
 ```
 $debug_flags = -O3
