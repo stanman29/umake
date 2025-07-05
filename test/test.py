@@ -117,7 +117,7 @@ class TestUMake(unittest.TestCase):
 
         if targets:
             targets_str = " ".join(targets)
-       
+
         try:
             def call():
                 return check_output(f"{COVEARAGE_CMD} {UMAKE_BIN} {remote_cache_conf} {local_cache_conf} {variant_config} {targets_str}", cwd="env/", shell=True).decode("utf-8")
