@@ -42,7 +42,6 @@ gcc -c a.c a.o
 
 ![ ](./images/overview/1.png)
 
-
 ### Graph after executing the rule
 
 ![ ](images/overview/2.png)
