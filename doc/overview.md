@@ -1,20 +1,17 @@
-UMake Overview
-==============
+# UMake Overview
 
 Since a lot of the core concepts from tup apply to umake it is highly recommended to read the following:
 
 * <http://gittup.org/tup/ex_dependencies.html>
 * <http://gittup.org/tup/make_vs_tup.html>
 
-Why UMake
----------
+## Why UMake
 
 * Fast modification detection (sub second even for large projects)
 * More parallelism due to DAG (more details later)
 * Fast re-compilation, with built-in cache (local-cache, remote-cache)
 
-My First UMakfile
------------------
+## My First UMakfile
 
 `a.c`:
 ```
@@ -48,8 +45,7 @@ gcc -c a.c a.o
 
 Now if any of the nodes (`a.c`, `dep_a.h`, `gcc -c a.c a.o` or `a.o`) will be modified, `a.o` will be regenerated. umake use both timestamps and hashes to check for modifications.
 
-Targets as dependencies
-----------------------
+## Targets as dependencies
 
 `b.c`:
 ```
@@ -95,8 +91,7 @@ In order to fix this order issue we need to tell `umake` that generating `b.o` s
 
 ![ ](images/overview/4.png)
 
-:foreach rule
---------
+## :foreach rule
 
 ```
 : src/src_a.c > compile.sh {filename} {target} > src/src_a.o
@@ -110,8 +105,7 @@ can be changed to:
 ```
 `:foreach` works exactlly like `:` (macros, vars, manual dependencies.)
 
-Macros and Variables
---------------------
+## Macros and Variables
 
 The above statement might repeated many times in UMakefile. so macros can be used in order to make life easier.
 
@@ -136,8 +130,8 @@ $flags = -O3
 : src/*.c > !c($includes, $flags)
 ```
 
-Compiling specific target
--------------------------
+## Compiling specific target
+
 
 ```
 umake lib/libmy_lib.so
