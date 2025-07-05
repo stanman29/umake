@@ -118,7 +118,6 @@ The above statement might repeated many times in UMakefile. so macros can be use
 
 `includes`, `flags` - arguments to marcro
 
-
 **The above can be also used with variables:**
 
 ```
