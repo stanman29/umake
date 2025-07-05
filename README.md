@@ -11,9 +11,7 @@ Influenced by [`tup`](http://gittup.org/tup/). With the features below your comp
 
 [![codecov](https://codecov.io/gh/grisha85/umake/branch/master/graph/badge.svg)](https://codecov.io/gh/grisha85/umake/tree/master/umake)
 
-
 [![droneio](http://xrayio.com/api/badges/grisha85/umake/status.svg)](http://xrayio.com/grisha85/umake/)
-
 
 #### `Local cache`
 
@@ -26,7 +24,6 @@ If someone already compiled most of the libraries in your project, use those res
 #### `Auto dependency discovery`
 
 makes your life easier to create build scripts no matter what your tool is: `gcc`, `protoc`, `docker build` ...
-
 
 [Detailed overview](doc/overview.md)
 
@@ -73,7 +70,7 @@ This section lists all the various configurations that umake supports
 
 [DPDK build](doc/dpdk-build.md)
 
-## Talking about UMake:
+## Talking about UMake
 
 This section includes link to various places around the web that reason about umake.
 We believe that by reviewing questions and opinions that other people wrote about umake one can learn more about it.
