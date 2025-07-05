@@ -1,5 +1,7 @@
 
-### UMakefile
+#### UMakefile
+
+--------------
 
 ## Rule `:`
 
@@ -28,7 +30,9 @@ Example:
 ```
 
 #### Recursive Source `**`
-recursice dependencies are support
+
+recursive dependencies are support
+
 ```
 root\
   a\
@@ -42,17 +46,21 @@ root\
   b\
     b
 ```
+
 * `root/**` -> (`a.a.a`, `a.a.b`, `b`)
 * `root/a/**/*.b` -> (`a.a.b`, `a.b.b`)
 
 #### Manual Dependency `|`
-In order to maintain a correct build order (that is executed in parallel), there are use cases where manual dependecy is needed. for example: if there are `generated headers` (like when using `protobuf`) that are being later used by another `command` to generate a different target.
+
+In order to maintain a correct build order (that is executed in parallel), there are use cases where manual dependency is needed. for example: if there are `generated headers` (like when using `protobuf`) that are being later used by another `command` to generate a different target.
 
 
 ## Rule `:foreach`
+
 Same as `:` but will create `command` for each `source` file existing on filesystem (like when we match the pettern *.o in the example above)
 
 ## Macro `!`
+
 Macros are expanded immediately (like using `#define X "hello"` in c/cpp)
 Macros can accept input parameters (again, similar to using c/cpp macros)
 
@@ -61,6 +69,7 @@ Example:
 !c(includes, flags) : gcc -g -O2 -Wall -fPIC -c {filename} $includes $flags -o {target} > {dir}/{noext}.o
 ```
 #### Default values
+
 `Macro` supports default values, by default they are `""`:
 ```
 !c(includes, flags=-O3) : gcc -g -O2 -Wall -fPIC -c {filename} $includes $flags -o {target} > {dir}/{noext}.o
@@ -71,7 +80,9 @@ now `!c` can be called as following:
 !c(-Iinclude, -O0)  # includes = -Iinclude, flags=-O0
 !c()                # includes = "", flags=-O3
 ```
+
 ## Const `$`
+
 Consts are like macros, and can be used to parametrize calls to macros
 Example:
 ```
@@ -80,9 +91,11 @@ $libs = -lpthread
 ```
 
 ## Config `[<config_item>:<config_value>]`
+
 Configs allow to configure and changing umake execution.
 
 #### `workdir`
+
 Default: \<root>
 
 Change the current working directory.
@@ -115,7 +128,7 @@ Note: multiple variants supported
 
 The ability to generate diffrent variants from the same sources. For example: debug/release compilations. Variants are `terminated` with a `newline`. Code that is not part of a variant is always running (common to all variants).
 ```
-# varaint is terminated with newline
+# variant is terminated with newline
 [variant:default]
 $cflags = -O3
 
@@ -135,6 +148,7 @@ umake --variant debug
 for `debug` variant.
 
 #### `include`
+
 Default: -
 
 include another `UMakefile` into the current one.
@@ -144,6 +158,7 @@ include another `UMakefile` into the current one.
 will open and parse `somedir/umakefile` in the current working dir context.
 
 #### `remote cache`
+
 Default: None
 
 Environment: UMAKE_CONFIG_REMOTE_CACHE
@@ -167,6 +182,7 @@ configure remote cache
 
 
 #### `local cache size`
+
 Default: 1500MB
 
 Environment: UMAKE_CONFIG_LOCAL_CACHE_SIZE
