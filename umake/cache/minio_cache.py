@@ -22,14 +22,14 @@ class MinioCache(base_cache.Cache):
         http = urllib3.PoolManager(
                 timeout=1,
                 maxsize=MAX_POOL_SIZE,
-                        cert_reqs='CERT_REQUIRED',
-                        ca_certs=ca_certs,
-                        retries=urllib3.Retry(
-                            total=3,
-                            backoff_factor=0.5,
-                            status_forcelist=[500, 502, 503, 504]
-                        )
-            )
+                cert_reqs='CERT_REQUIRED',
+                ca_certs=ca_certs,
+                retries=urllib3.Retry(
+                    total=3,
+                    backoff_factor=0.5,
+                    status_forcelist=[500, 502, 503, 504]
+                )
+        )
 
         self.mc = Minio(global_config.remote_hostname,
                         access_key=global_config.remote_access_key,
