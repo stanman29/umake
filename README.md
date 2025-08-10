@@ -1,6 +1,6 @@
 # UMake
 
-#### Blazing Fast. Sub second Modification detection. Just a few seconds for cached compilation
+### Blazing Fast. Sub second Modification detection. Just a few seconds for cached compilation
 
 ![dpdk build](doc/images/dpdk-build/dpdk-build.gif)
 
