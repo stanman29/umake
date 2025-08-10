@@ -8,7 +8,7 @@ Targets are being cached after creation, and checked if the target is in cache j
 
 * `sha1` of the target sources (those that were generated from UMakefile) are being calculated and `sha1` of the `command` itself. All dependecies files (also those that were auto detected) Saved to `md-<calculated_hash>` file.
 * `sha1` of all dependecies are calculated and the just created target is saved to `<all_dependecies_hash>/<target_name_hash>`
-
+  
 ### On Load
 
 * `sha1` of the target sources (those that were generated from UMakefile) are being calculated and `sha1` of the `command` itself. Reading `md-<calculated_hash>` for all the file dependencies
